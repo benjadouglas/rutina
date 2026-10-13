@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rutina</title>
+<style>
+  :root { --ink: #1d1d1b; --muted: #6b6b66; --line: #e4e2dc; --paper: #fbfaf7; --accent: #b4532a; }
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; }
+  nav { position: sticky; top: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 1.5rem; display: flex; gap: 1.5rem; overflow-x: auto; z-index: 1; }
+  nav a { padding: 0.9rem 0; color: var(--muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap; border-bottom: 2px solid transparent; }
+  nav a:hover, nav a.active { color: var(--ink); border-color: var(--accent); }
+  main { max-width: 64rem; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  section:last-child { border-bottom: 0; }
+  h1 { font-size: 2rem; margin: 0 0 1rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.25rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 0.5rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  p, li { max-width: 46rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; margin: 0.75rem 0 1.25rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  td:first-child { white-space: nowrap; }
+  strong { font-weight: 650; }
+  code, pre { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.88rem; }
+  pre { background: #f1efe9; padding: 0.9rem 1rem; border-radius: 6px; overflow-x: auto; }
+  code { background: #f1efe9; padding: 0.1rem 0.3rem; border-radius: 3px; }
+  pre code { background: none; padding: 0; }
+  /* Grilla semanal: scroll horizontal y celdas compactas */
+  #semana table:first-of-type { font-size: 0.8rem; display: block; overflow-x: auto; }
+  #semana table:first-of-type th, #semana table:first-of-type td { min-width: 7.5rem; padding: 0.4rem 0.5rem; }
+  #semana table:first-of-type td:first-child { min-width: 3.5rem; color: var(--muted); }
+  @media print {
+    nav { display: none; }
+    body { background: #fff; }
+    main { max-width: none; padding: 0; }
+    section { page-break-before: always; border: 0; padding: 0; }
+    section:first-child { page-break-before: auto; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="#semana">Semana</a>
+  <a href="#gym">Gimnasio</a>
+  <a href="#nutricion">Nutrición</a>
+  <a href="#cuerpo">Cuerpo</a>
+</nav>
+<main>
+<section id="semana">
+<h1 id="semana">Semana</h1>
+<p>Objetivo del semestre: perder grasa manteniendo o ganando músculo,
+dormir mejor, piel y cara más vivas, y avanzar el proyecto. Pocas
+materias, así que la grilla gira alrededor del gym y el proyecto, y las
+clases son los bloques fijos.</p>
+<h2 id="grilla">Grilla</h2>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>Lun</th>
+<th>Mar</th>
+<th>Mié</th>
+<th>Jue</th>
+<th>Vie</th>
+<th>Sáb</th>
+<th>Dom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:00</td>
+<td>Despertar + sol</td>
+<td>Despertar + sol</td>
+<td>Despertar + sol</td>
+<td>Despertar + sol</td>
+<td>Despertar + sol</td>
+<td>Despertar + sol (hasta 9:00 si saliste)</td>
+<td>Despertar + sol</td>
+</tr>
+<tr>
+<td>8:30</td>
+<td>Proyecto</td>
+<td>Proyecto</td>
+<td>Proyecto</td>
+<td><strong>Correr</strong> 9:00</td>
+<td>Proyecto</td>
+<td>Libre</td>
+<td><strong>Correr</strong> 9:30</td>
+</tr>
+<tr>
+<td>10:30</td>
+<td><strong>Gym: Pecho</strong></td>
+<td>Proyecto</td>
+<td>Proyecto</td>
+<td>Proyecto</td>
+<td><strong>Gym: Tríceps + isquios</strong></td>
+<td>Libre / gym de recupero</td>
+<td>Libre</td>
+</tr>
+<tr>
+<td>12:30</td>
+<td>Almuerzo</td>
+<td>Almuerzo</td>
+<td>Almuerzo</td>
+<td>Almuerzo</td>
+<td>Almuerzo</td>
+<td>Almuerzo</td>
+<td>Almuerzo</td>
+</tr>
+<tr>
+<td>13:30</td>
+<td>Redes 2 T (hasta 15:45)</td>
+<td></td>
+<td>Ing Soft 3 (hasta 15:45)</td>
+<td></td>
+<td>Ing Soft 3 (hasta 17:15)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14:00</td>
+<td></td>
+<td><strong>Gym: Bíceps + cuádriceps</strong></td>
+<td></td>
+<td><strong>Gym: Espalda</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16:00</td>
+<td>Libre</td>
+<td>Libre</td>
+<td><strong>Gym: Hombros</strong></td>
+<td>Libre</td>
+<td></td>
+<td>Libre</td>
+<td>Libre</td>
+</tr>
+<tr>
+<td>17:00</td>
+<td>Habilidades Blandas (hasta 20:00)</td>
+<td>Clase Juli (hasta 18:00)</td>
+<td>Libre</td>
+<td>Redes 2 P 17:15 (hasta 19:30)</td>
+<td>Libre</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21:00</td>
+<td>Cena</td>
+<td>Cena</td>
+<td>Cena</td>
+<td>Cena</td>
+<td>Cena</td>
+<td>Cena o comida libre</td>
+<td>Cena</td>
+</tr>
+<tr>
+<td>23:00</td>
+<td>Descarga en papel</td>
+<td>Descarga en papel</td>
+<td>Descarga en papel</td>
+<td>Descarga en papel</td>
+<td>Descarga en papel</td>
+<td></td>
+<td>Descarga en papel</td>
+</tr>
+<tr>
+<td>23:30</td>
+<td>Cama con libro</td>
+<td>Cama con libro</td>
+<td>Cama con libro</td>
+<td>Cama con libro</td>
+<td>Cama con libro</td>
+<td></td>
+<td>Cama con libro</td>
+</tr>
+</tbody>
+</table>
+<p>Los huecos marcados "Libre" son para estudio cuando haga falta,
+trámites, o nada. El estudio fuera de clase no tiene bloque fijo a
+propósito.</p>
+<h2 id="un-día-tipo">Un día tipo</h2>
+<ol type="1">
+<li><strong>8:00</strong> suena el despertador (no el celular, que está
+fuera de la pieza). Te levantás, abrís la ventana o salís al patio o
+balcón, 15 minutos de luz en cara y brazos. Nublado también cuenta:
+afuera hay diez veces más luz que adentro.</li>
+<li><strong>8:15</strong> primer café. Desayuno liviano opcional: yogur
+griego con una fruta, o 2-3 huevos. Recomendado, no obligatorio.</li>
+<li><strong>8:30 a 12:00</strong> bloque de proyecto. Un solo bloque,
+sin reuniones ni redes. Segundo café a las 11 si querés.</li>
+<li><strong>12:30</strong> almuerzo según <code>nutricion.md</code>. Es
+la comida más grande del día y la que te carga para el gym.</li>
+<li><strong>Gym</strong> en su horario del día. 60 minutos, 5-6
+ejercicios, según <code>gym.md</code>.</li>
+<li><strong>Clases</strong> cuando toquen.</li>
+<li><strong>Último café o mate</strong> no más tarde de las 16:00.</li>
+<li><strong>21:00</strong> cena.</li>
+<li><strong>23:00</strong> diez minutos con papel y lapicera: todo lo
+pendiente y lo que te preocupa, sin ordenar. Cierra el día.</li>
+<li><strong>23:15</strong> pantallas afuera. Celular cargando fuera de
+la pieza.</li>
+<li><strong>23:30</strong> cama con un libro en papel y luz baja. Apagás
+cuando te pesan los ojos, nunca antes. Si pasan 20 minutos despierto, te
+levantás, vas a otro cuarto con luz baja, y volvés cuando tengas
+sueño.</li>
+</ol>
+<h2 id="reglas-de-la-semana">Reglas de la semana</h2>
+<ul>
+<li><strong>Gym faltado</strong> → se hace el sábado. Si faltaste dos,
+se hace el que toca por orden y el otro se pierde. Nunca dos sesiones el
+mismo día.</li>
+<li><strong>Salida</strong> → cualquier día, una por semana con alcohol,
+máximo tres tragos. La comida libre es esa noche. Al día siguiente el
+despertar se corre como mucho a las 9:00. No se compensa comiendo
+menos.</li>
+<li><strong>Correr</strong> → jueves 9:00 y domingo 9:30, 25 a 30
+minutos a ritmo de conversación. Si un día no sale, no se recupera.</li>
+<li><strong>Pasos</strong> → 8.000 por día. Caminar a la facu o al gym
+cuando se pueda es la forma más fácil de llegar.</li>
+<li><strong>Sueño</strong> → el ancla es las 8:00, no la hora de
+acostarse. Cuando se sostenga dos semanas sin esfuerzo, se pasa a 7:30,
+y después a 7:00.</li>
+</ul>
+<h2 id="progresión-del-despertar">Progresión del despertar</h2>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Despertar</th>
+<th>Condición para pasar a la siguiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>8:00</td>
+<td>Dos semanas seguidas despertando a las 8 sin sentirlo un
+castigo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7:30</td>
+<td>Dos semanas más</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7:00</td>
+<td>Objetivo final</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-semanal-martes">Control semanal (martes)</h2>
+<table>
+<thead>
+<tr>
+<th>Semana</th>
+<th>Peso (balanza del gym)</th>
+<th>Cintura (cm, a la altura del ombligo)</th>
+<th>Gyms hechos /5</th>
+<th>Corridas /2</th>
+<th>Noches dormido antes de la 1 /7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fotos cada cuatro semanas: mismo lugar, misma luz, misma hora, de
+frente y de perfil.</p>
+</section>
+<section id="gym">
+<h1 id="gimnasio">Gimnasio</h1>
+<p>Cinco días, un grupo principal por día, piernas repartidas en dos.
+Nunca dos días seguidos con grupos que se ayudan entre sí: pecho →
+bíceps → hombros → espalda → tríceps. Sin potencia, sin saltos, sin
+series al fallo sistemáticas.</p>
+<h2 id="cómo-se-entrena">Cómo se entrena</h2>
+<ul>
+<li><strong>Entrada en calor</strong>: 5 minutos de bici suave + 2
+series de aproximación del primer ejercicio con poco peso.</li>
+<li><strong>Esfuerzo</strong>: terminás cada serie con 1 o 2
+repeticiones en reserva. Si no sabés si te quedaba una, te quedaba.</li>
+<li><strong>Progresión doble</strong>: cada ejercicio tiene un rango
+(por ejemplo 8-10). Arrancás con un peso que te deje en el piso del
+rango. Cuando hacés el techo del rango en todas las series, subís el
+peso en la sesión siguiente (2,5 kg en mancuernas, 5 kg en barra o
+máquina) y volvés al piso. Es la única regla de progresión.</li>
+<li><strong>Descansos</strong>: 2 a 3 minutos en los básicos (press,
+sentadilla, prensa, remo, dominadas), 60 a 90 segundos en el resto.</li>
+<li><strong>Duración</strong>: 60 minutos. Si te pasás, sacás el último
+ejercicio, no acortás los descansos.</li>
+<li><strong>Descarga</strong>: cada 8 semanas, una semana con la mitad
+de las series y el mismo peso. Después seguís subiendo.</li>
+<li><strong>Sábado</strong>: solo si faltaste un día de la semana. Se
+hace ese día tal cual. Si no faltaste, descansás.</li>
+</ul>
+<h2 id="lunes--pecho--1030">Lunes · Pecho · 10:30</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ejercicio</th>
+<th>Series × reps</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Press de banca plano</td>
+<td>4 × 6-8</td>
+<td>El ejercicio pesado del día. Tu fuerte, cuidalo.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Press inclinado con mancuernas</td>
+<td>3 × 8-10</td>
+<td>Banco a 30°, no más.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cruces en polea</td>
+<td>3 × 10-12</td>
+<td>Te funciona bien. Pausa de un segundo al cerrar.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Press declinado o fondos en paralelas</td>
+<td>3 × 8-10</td>
+<td>Fondos solo si te salen 8 limpios con el cuerpo.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Aperturas en banco inclinado</td>
+<td>2 × 12-15</td>
+<td>Liviano, estirar bien abajo.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Abdominales: elevación de piernas</td>
+<td>3 × 12-15</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="martes--bíceps--cuádriceps--1400">Martes · Bíceps + cuádriceps ·
+14:00</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ejercicio</th>
+<th>Series × reps</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sentadilla con barra</td>
+<td>3 × 8</td>
+<td><strong>Liviana.</strong> Barra sola o 20-30 kg las primeras dos
+semanas. Objetivo: técnica y estabilidad, no peso. Subís 2,5 kg por
+semana solo si las 3 series salen limpias.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Extensión de cuádriceps (camilla)</td>
+<td>3 × 12-15</td>
+<td>Pausa arriba.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Estocada atrás con mancuernas</td>
+<td>2 × 10 por pierna</td>
+<td>Si la rodilla protesta, saltalo.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bíceps con barra W de pie</td>
+<td>4 × 8-10</td>
+<td>Tu fuerte. Codos fijos.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Bíceps alternado con mancuernas</td>
+<td>3 × 10-12</td>
+<td>Supinar al subir.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bíceps martillo o en polea</td>
+<td>2 × 12-15</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="miércoles--hombros--1600">Miércoles · Hombros · 16:00</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ejercicio</th>
+<th>Series × reps</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Press militar sentado (barra o mancuernas)</td>
+<td>4 × 6-8</td>
+<td>El pesado del día. Te funciona bien.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vuelos laterales con mancuernas</td>
+<td>4 × 12-15</td>
+<td>Es lo que más ancho te hace. Liviano y mucho.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Remo de pie con barra W</td>
+<td>3 × 10-12</td>
+<td>Tu fuerte. Codos por encima de las manos.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Deltoides posterior (pájaros o polea cruzada)</td>
+<td>3 × 12-15</td>
+<td>Lo que más olvidás y lo que más se nota de espaldas.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vuelo frontal en polea baja</td>
+<td>2 × 12</td>
+<td>Opcional si sobra tiempo.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Abdominales cruzados</td>
+<td>3 × 15</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="jueves--espalda--1400">Jueves · Espalda · 14:00</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ejercicio</th>
+<th>Series × reps</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dominadas asistidas o jalón al pecho</td>
+<td>4 × 6-10</td>
+<td>Si hacés 10 asistidas, bajás la asistencia. Meta de la temporada: 8
+sin asistencia.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Remo con barra o remo a caballo</td>
+<td>4 × 8-10</td>
+<td>El pesado del día.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Remo individual con mancuerna</td>
+<td>3 × 10-12</td>
+<td>Un brazo apoyado en el banco.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jalón con agarre cerrado</td>
+<td>3 × 10-12</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pullover con mancuerna</td>
+<td>2 × 12-15</td>
+<td>Banco atravesado, como lo hacías.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Lumbares en banco</td>
+<td>2 × 15</td>
+<td>Sin peso.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viernes--tríceps--isquiosglúteo--1030">Viernes · Tríceps +
+isquios/glúteo · 10:30</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ejercicio</th>
+<th>Series × reps</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Prensa</td>
+<td>4 × 8-10</td>
+<td><strong>Pesada.</strong> Acá va la carga que no va en la sentadilla.
+Tu fuerte.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Peso muerto rumano</td>
+<td>3 × 8-10</td>
+<td>Espalda neutra, bajar hasta sentir los isquios, no hasta el
+piso.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Curl femoral (isquios en camilla)</td>
+<td>3 × 12</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pantorrillas de pie o en máquina</td>
+<td>4 × 15-20</td>
+<td>Pausa abajo, estirar.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Tríceps francés acostado</td>
+<td>4 × 8-10</td>
+<td>Tu fuerte. Codos cerrados.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Tríceps en polea</td>
+<td>3 × 12-15</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Fondos entre bancos</td>
+<td>2 × máximo menos 2</td>
+<td>Opcional si sobra tiempo.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="por-qué-así">Por qué así</h2>
+<ul>
+<li><strong>Frecuencia 1 por grupo con 5 días</strong> se compara bien
+con frecuencia 2 cuando el volumen semanal es el mismo. Y vos entrenás
+mejor con un grupo por día, es lo que hiciste cuatro años con tu
+profe.</li>
+<li><strong>Pecho y tríceps separados por dos días</strong>, espalda y
+bíceps separados por dos días: el músculo secundario recupera antes de
+volver a tocarlo.</li>
+<li><strong>Sentadilla liviana el martes, prensa pesada el
+viernes</strong>: la sentadilla vuelve a aparecer sin pelearte con el
+peso, y la prensa cubre el estímulo pesado mientras tanto. En dos meses
+la sentadilla debería estar en 50-60 kg con buena técnica.</li>
+<li><strong>Sin potencia ni saltos</strong>: eran para rendimiento
+deportivo. Para marcarte suman fatiga y riesgo sin sumar músculo.</li>
+</ul>
+<h2 id="registro">Registro</h2>
+<p>Anotá peso y reps de cada ejercicio en el celular o en una libreta.
+Sin registro no hay progresión doble. Formato mínimo:</p>
+<pre><code>Lun 20/10 · Pecho
+Press banca      50 kg  8-8-7-7
+Press inclinado  18 kg  10-9-9
+Cruces           15 kg  12-12-11</code></pre>
+<p>Cuando una línea llega al techo en todas las series, la sesión
+siguiente lleva más peso.</p>
+</section>
+<section id="nutricion">
+<h1 id="nutrición">Nutrición</h1>
+<p>Objetivo: perder grasa sin perder músculo. Déficit chico, proteína
+alta, dos comidas fijas, nada de contar calorías. Se controla con la
+balanza del gym y la cinta, no con una app.</p>
+<h2 id="los-números-por-si-querés-saberlos">Los números, por si querés
+saberlos</h2>
+<table>
+<tbody>
+<tr>
+<td>Mantenimiento estimado</td>
+<td>~2.500 kcal</td>
+</tr>
+<tr>
+<td>Objetivo diario</td>
+<td>~2.100 kcal</td>
+</tr>
+<tr>
+<td>Proteína</td>
+<td>140-150 g</td>
+</tr>
+<tr>
+<td>Ritmo esperado</td>
+<td>0,3 a 0,5 kg por semana, o 1 cm de cintura cada 2-3 semanas</td>
+</tr>
+</tbody>
+</table>
+<p>No hace falta contarlos. Las porciones de abajo ya dan eso. Si en
+tres semanas la cintura no bajó nada, se achica el carbohidrato de la
+cena. Si bajás más de 0,7 kg por semana, se agranda.</p>
+<h2 id="horarios">Horarios</h2>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>Qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:15</td>
+<td>Café. Desayuno liviano con proteína, opcional pero recomendado.</td>
+</tr>
+<tr>
+<td>12:30</td>
+<td>Almuerzo. La comida grande.</td>
+</tr>
+<tr>
+<td>16:00</td>
+<td>Último café o mate. Aperitivo si hay hambre.</td>
+</tr>
+<tr>
+<td>21:00</td>
+<td>Cena. Lunes, antes del gym nocturno si alguna vez lo hacés de
+noche.</td>
+</tr>
+</tbody>
+</table>
+<p>El desayuno es opcional pero conviene por dos motivos: la bilirrubina
+sube con ayunos largos (y eso da cara cansada), y llegar a 150 g de
+proteína en dos platos es pesado. El plan nunca depende de él: si no
+desayunás, el almuerzo y la cena son iguales.</p>
+<h2 id="el-plato-tipo">El plato tipo</h2>
+<p>Cada almuerzo y cada cena se arman con la misma fórmula. No hace
+falta pesar: usá la mano.</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Cantidad</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proteína</td>
+<td>2 palmas de la mano (200-250 g cocido)</td>
+<td>Pechuga, 2 milanesas de pollo al horno, 3 huevos + 2 fetas de jamón,
+200 g de carne magra, 1 lata grande de atún</td>
+</tr>
+<tr>
+<td>Carbohidrato</td>
+<td>1 puño cerrado</td>
+<td>Arroz, papa, batata, fideos, 2 tortillas de fajita, 2 rebanadas de
+pan</td>
+</tr>
+<tr>
+<td>Verduras</td>
+<td>Libre, mínimo 2 puños</td>
+<td>Lechuga, tomate, zanahoria, zapallito, brócoli, cebolla, morrón,
+pepino</td>
+</tr>
+<tr>
+<td>Grasa</td>
+<td>1 cucharada sopera</td>
+<td>Aceite de oliva, o el queso del plato</td>
+</tr>
+</tbody>
+</table>
+<p>Almuerzo: el puño de carbohidrato va completo. Cena: medio puño,
+salvo que haya habido gym a la tarde, en ese caso completo.</p>
+<h2 id="almuerzos-elegí-uno">Almuerzos (elegí uno)</h2>
+<ol type="1">
+<li><strong>Pollo a la plancha</strong> con arroz y ensalada de lechuga,
+tomate y zanahoria.</li>
+<li><strong>Milanesas de pollo al horno</strong> (2) con papas al horno
+y ensalada.</li>
+<li><strong>Fajitas</strong>: pollo salteado con cebolla y morrón, 2
+tortillas, lechuga, un poco de queso.</li>
+<li><strong>Pollo al curry</strong> con arroz y zapallito salteado.</li>
+<li><strong>Omelet de 3 huevos</strong> con jamón y queso, 2 tostadas,
+tomate.</li>
+<li><strong>Sándwich de milanesa</strong> en pan árabe con lechuga y
+tomate, sin mayonesa, una fruta.</li>
+<li><strong>Fideos con pollo</strong> y verduras salteadas, queso
+rallado.</li>
+<li><strong>Wrap de pollo</strong>: tortilla, pollo desmenuzado,
+lechuga, tomate, queso crema light.</li>
+<li><strong>Carne a la plancha</strong> con puré de papa y zanahoria y
+ensalada.</li>
+<li><strong>Bowl de arroz</strong> con 3 huevos revueltos, jamón y
+brócoli.</li>
+</ol>
+<h2 id="cenas-elegí-una">Cenas (elegí una)</h2>
+<ol type="1">
+<li><strong>Omelet de 3 huevos</strong> con jamón, queso y espinaca, 1
+tostada.</li>
+<li><strong>Pollo al horno</strong> con verduras al horno (zapallito,
+cebolla, morrón, zanahoria).</li>
+<li><strong>Ensalada grande con pollo</strong>: lechuga, tomate, pepino,
+pollo a la plancha, queso en cubos, aceite de oliva.</li>
+<li><strong>Milanesa de pollo al horno</strong> (1 grande) con ensalada
+y media papa al horno.</li>
+<li><strong>Revuelto de 3 huevos</strong> con jamón y cebolla, 2
+tostadas con queso.</li>
+<li><strong>Tortilla de papa light</strong>: 3 huevos, media papa,
+cebolla, al horno o sartén con poco aceite.</li>
+<li><strong>Fajitas de cena</strong>: pollo y verduras, 1 tortilla,
+mucha lechuga.</li>
+<li><strong>Tostadas con huevo</strong>: 2 tostadas, 2 huevos revueltos,
+2 fetas de jamón, queso, tomate.</li>
+<li><strong>Pollo desmenuzado</strong> salteado con verduras y medio
+puño de arroz.</li>
+<li><strong>Atún</strong> (si querés probarlo) con ensalada de tomate,
+huevo duro y cebolla, 1 tostada.</li>
+</ol>
+<h2 id="desayuno-liviano-opcional-elegí-uno">Desayuno liviano (opcional,
+elegí uno)</h2>
+<ul>
+<li>Yogur griego natural (1 pote) con una banana o manzana.</li>
+<li>2-3 huevos revueltos solos o con una tostada.</li>
+<li>1 tostada con queso y 2 fetas de jamón, más una fruta.</li>
+</ul>
+<h2 id="aperitivos">Aperitivos</h2>
+<p>Cuando ataca el hambre entre comidas. Dos listas.</p>
+<p><strong>Libre, sin medir</strong></p>
+<ul>
+<li>Manzana, banana, naranja, mandarina, frutilla</li>
+<li>Pepino, zanahoria, tomate cherry, apio</li>
+<li>Pochoclo hecho en olla, sin manteca</li>
+<li>Gelatina light</li>
+<li>Café, mate (hasta las 16:00), té, agua con gas con limón</li>
+<li>Caldo caliente</li>
+</ul>
+<p><strong>Porción medida, una por día como mucho</strong></p>
+<ul>
+<li>Un puñado chico de nueces o almendras (lo que entra en la mano
+cerrada)</li>
+<li>2 fetas de queso o 1 trozo del tamaño del pulgar</li>
+<li>3-4 fetas de jamón</li>
+<li>1 yogur</li>
+<li>2 huevos duros</li>
+</ul>
+<p>Regla práctica: primero agua, después fruta, después proteína. El
+hambre de la tarde muchas veces es sed o sueño.</p>
+<h2 id="salidas-y-comida-libre">Salidas y comida libre</h2>
+<ul>
+<li>Una noche por semana, cualquier día. Alcohol hasta 3 tragos. Cerveza
+y fernet con cola son los que más suman; vino, gin tonic o fernet con
+cola zero suman menos.</li>
+<li>La comida libre es esa misma noche: lo que quieras, una porción
+normal, sin postre doble.</li>
+<li>Al día siguiente: desayuno, almuerzo y cena normales. No se saltea
+nada para compensar. Un día libre bien hecho no mueve nada; tres días de
+"ya fue" sí.</li>
+</ul>
+<h2 id="compras-de-la-semana">Compras de la semana</h2>
+<ul>
+<li>1,5 a 2 kg de pechuga de pollo (o mitad pechuga, mitad milanesas sin
+freír)</li>
+<li>18 a 24 huevos</li>
+<li>300 g de jamón cocido</li>
+<li>300 g de queso (cremoso o barra) y 1 queso crema light</li>
+<li>2 potes grandes de yogur griego natural o 7 chicos</li>
+<li>1 kg de arroz, 1 kg de papas, 1 paquete de fideos, 1 paquete de
+tortillas de fajita, 1 pan lactal</li>
+<li>Verduras: 2 lechugas, 1 kg de tomate, 1 kg de cebolla, 3 morrones, 4
+zapallitos, 1 kg de zanahoria, 2 pepinos, 1 brócoli</li>
+<li>Fruta: 7 manzanas, 7 bananas, lo que haya de estación</li>
+<li>Aceite de oliva, curry, pimentón, orégano, ajo, limón</li>
+<li>Café, yerba, agua con gas, gelatina light, maíz para pochoclo</li>
+</ul>
+<h2 id="meal-prep-del-domingo-1-hora">Meal prep del domingo, 1 hora</h2>
+<ol type="1">
+<li>Horno: 1 kg de pechuga con sal, pimentón y orégano, 25 minutos. Se
+guarda 4 días en la heladera.</li>
+<li>Olla: 10 huevos duros, 10 minutos. Pelados, en un tupper.</li>
+<li>Olla: 2 tazas de arroz. Se guarda 4 días.</li>
+<li>Cortar cebolla, morrón y zanahoria en tiras. Un tupper para fajitas
+y salteados.</li>
+<li>Lavar y secar la lechuga.</li>
+</ol>
+<p>Con eso, todo almuerzo y cena de la semana sale en menos de 10
+minutos.</p>
+<h2 id="agua">Agua</h2>
+<p>2 a 2,5 litros por día. Botella de 1 litro llena en el escritorio a
+la mañana, otra a la tarde. Es lo más barato para la piel seca y para el
+hambre falsa.</p>
+</section>
+<section id="cuerpo">
+<h1 id="cuerpo-sueño-piel-ojeras-pelo-médico">Cuerpo: sueño, piel,
+ojeras, pelo, médico</h1>
+<h2 id="sueño">Sueño</h2>
+<p>El problema no es a qué hora te acostás, es que la cama se volvió el
+lugar donde pensás. Dos horas por noche de "no me duermo, pienso, agarro
+el celular" entrenaron esa asociación. Se desarma con tres cosas: ancla
+fija de despertar, luz a la mañana, y cama solo para dormir.</p>
+<h3 id="protocolo">Protocolo</h3>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>Qué</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:00</td>
+<td>Despertador en la mesa de luz, no el celular. Te levantás sin "cinco
+minutos más".</td>
+<td>El despertar fijo es lo único que mueve el reloj. La hora de dormir
+se corre sola después.</td>
+</tr>
+<tr>
+<td>8:00-8:15</td>
+<td>15 minutos de luz afuera: patio, balcón, vereda. Nublado también.
+Sin anteojos de sol.</td>
+<td>La luz de la mañana adelanta el reloj y te da sueño 15-16 horas
+después. Es la palanca más fuerte que existe.</td>
+</tr>
+<tr>
+<td>16:00</td>
+<td>Último café o mate.</td>
+<td>La cafeína tiene vida media de 5 a 8 horas. Un café a las 18 a la 1
+de la mañana sigue a la mitad.</td>
+</tr>
+<tr>
+<td>21:00</td>
+<td>Cena. Nunca después de las 22.</td>
+<td>Dormir con el estómago lleno fragmenta el sueño.</td>
+</tr>
+<tr>
+<td>23:00</td>
+<td>Diez minutos con papel y lapicera: pendientes, preocupaciones, lo
+que sea, sin ordenar.</td>
+<td>Saca de la cabeza lo que después aparece en la cama.</td>
+</tr>
+<tr>
+<td>23:15</td>
+<td>Celular a cargar fuera de la pieza. Si querés audio, parlante o
+auriculares con un podcast, sin pantalla.</td>
+<td>El scroll te duerme porque te distrae de pensar, pero la luz y el
+enganche te corren el sueño media hora o más. El libro hace lo mismo sin
+el costo.</td>
+</tr>
+<tr>
+<td>23:30</td>
+<td>Cama con libro en papel, luz baja. Apagás cuando te pesan los ojos,
+no antes.</td>
+<td>Acostarse sin sueño es lo que enseña a la cama a ser el lugar de
+pensar.</td>
+</tr>
+<tr>
+<td>Si pasan 20 min despierto</td>
+<td>Te levantás, otro cuarto, luz baja, leés. Volvés cuando tengas
+sueño. Las veces que haga falta.</td>
+<td>Es la parte que más cuesta y la que más funciona. En dos semanas la
+cama vuelve a significar dormir.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reglas">Reglas</h3>
+<ul>
+<li>Sin siestas (no las dormís igual, pero por si acaso).</li>
+<li>El fin de semana también a las 8:00. Una mañana por semana, la
+posterior a una salida, hasta las 9:00. Nunca más tarde: dormir hasta
+las 11 el domingo es un jet lag de 3 horas el lunes.</li>
+<li>Correr jueves y domingo a la mañana es parte del protocolo:
+ejercicio con luz de mañana.</li>
+<li>Cuando el 8:00 lleve dos semanas sin esfuerzo, 7:30. Dos semanas
+más, 7:00.</li>
+</ul>
+<h3 id="qué-esperar">Qué esperar</h3>
+<ul>
+<li>Semana 1: cansancio a la tarde, te vas a dormir más o menos igual
+que ahora. Normal.</li>
+<li>Semana 2: empezás a tener sueño antes de las 24. Aprovechalo,
+apagás.</li>
+<li>Semana 3-4: dormirte lleva menos de 20 minutos la mayoría de las
+noches.</li>
+</ul>
+<p>Si a las 4 semanas seguís tardando más de una hora en dormirte tres
+noches por semana, eso es para un médico, no para más hábitos.</p>
+<h2 id="piel">Piel</h2>
+<p>Piel seca y apagada. Nada de ácidos, exfoliantes ni retinoides por
+ahora: primero hidratar, después ver si hace falta textura.</p>
+<h3 id="rutina-3-productos">Rutina, 3 productos</h3>
+<table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Paso</th>
+<th>Producto (línea de farmacia)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mañana</td>
+<td>Agua tibia o limpiador suave</td>
+<td>CeraVe limpiador hidratante, La Roche-Posay Toleriane, Eucerin
+DermatoClean</td>
+</tr>
+<tr>
+<td>Mañana</td>
+<td>Hidratante</td>
+<td>CeraVe crema hidratante, La Roche-Posay Toleriane Sensitive, Eucerin
+Urea 5%</td>
+</tr>
+<tr>
+<td>Mañana</td>
+<td>Protector solar 50, cara y cuello, todos los días, llueva o no</td>
+<td>La Roche-Posay Anthelios, Eucerin Sun, ISDIN Fusion Water</td>
+</tr>
+<tr>
+<td>Noche</td>
+<td>Limpiador suave</td>
+<td>el mismo</td>
+</tr>
+<tr>
+<td>Noche</td>
+<td>Hidratante, capa más generosa</td>
+<td>el mismo</td>
+</tr>
+</tbody>
+</table>
+<p>Dos minutos a la mañana, dos a la noche. Los tres productos duran 2 a
+3 meses.</p>
+<h3 id="lo-que-cambia-la-cara-más-que-cualquier-crema">Lo que cambia la
+cara más que cualquier crema</h3>
+<ul>
+<li>Agua: 2 a 2,5 litros por día.</li>
+<li>Dormir: lo de arriba.</li>
+<li>Protector solar todos los días. Es lo que previene manchas y el
+aspecto apagado a 5 años.</li>
+<li>Ducha tibia, no hirviendo, y la cara se seca a toques, sin
+frotar.</li>
+</ul>
+<p>Si a los 2 meses la piel está hidratada y querés trabajar textura o
+poros, se agrega una noche sí y una no un retinoide suave (adapalene
+0,1%, venta libre). Antes no.</p>
+<h2 id="ojeras">Ojeras</h2>
+<p>Entre marrones y azuladas. Lo azulado es vascular y responde al sueño
+y a la hidratación; lo marrón es pigmentación y responde al protector
+solar y a no frotarse. No hay crema que arregle ninguna de las dos de
+verdad.</p>
+<ul>
+<li>Dormir y la luz de la mañana: 70% del resultado.</li>
+<li>Protector solar hasta el párpado inferior.</li>
+<li>No frotarse los ojos. Si pican, gotas o agua fría.</li>
+<li>Agua.</li>
+<li>Opcional, si querés gastar: un contorno con cafeína a la mañana.
+Efecto chico y transitorio, pero existe.</li>
+</ul>
+<p>Fotos de la cara cada 4 semanas, misma luz, para comparar. La
+diferencia a los dos meses de dormir bien es grande y no la vas a notar
+en el espejo día a día.</p>
+<h2 id="pelo">Pelo</h2>
+<p>Dutasteride + minoxidil oral es el tope de lo que existe. No hay nada
+que sumar de forma importante. Opcionales:</p>
+<ul>
+<li>Shampoo con ketoconazol 2% dos veces por semana (Ketomed, Nizoral).
+Efecto chico, barato.</li>
+<li>Como el minoxidil es oral y no tópico, no reseca la cara. Si notás
+hinchazón en tobillos o palpitaciones, es del minoxidil: médico.</li>
+</ul>
+<p>Corte de pelo cada 4 a 5 semanas, fijo en el calendario. Es lo que
+más cambia la cara por menos plata.</p>
+<h2 id="pendientes-médicos">Pendientes médicos</h2>
+<p>Análisis del 19/06/2026: hemograma, hierro, glucosa, riñón, hígado y
+tiroides normales. Dos cosas a seguir.</p>
+<table>
+<thead>
+<tr>
+<th>Qué</th>
+<th>Por qué</th>
+<th>Cuándo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repetir vitamina D</td>
+<td>Estaba en 18 ng/mL (insuficiente, deseable más de 30). Tomás dosis
+mensual desde junio, ya pasaron los 3 meses. Hay que ver si alcanza o si
+hay que subirla.</td>
+<td>Este mes</td>
+</tr>
+<tr>
+<td>Repetir bilirrubina y preguntar por síndrome de Gilbert</td>
+<td>Bilirrubina indirecta 0,91 (tope 0,70) con hígado normal. En alguien
+sano casi siempre es Gilbert: benigno, no se trata. Pero el ayuno largo
+la sube y da tono amarillento y cara cansada. Si lo confirman, el
+desayuno liviano deja de ser opcional.</td>
+<td>Mismo pinchazo</td>
+</tr>
+</tbody>
+</table>
+<p>Pedirle la orden al médico de cabecera, se hace en una mañana en
+ayunas. Para la vitamina D no suspender la dosis antes.</p>
+<h2 id="control">Control</h2>
+<table>
+<thead>
+<tr>
+<th>Qué</th>
+<th>Cuándo</th>
+<th>Cómo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peso</td>
+<td>Martes antes del gym</td>
+<td>Balanza del gym, misma hora, misma ropa. Anotarlo en
+<code>semana.md</code>.</td>
+</tr>
+<tr>
+<td>Cintura</td>
+<td>Martes a la mañana</td>
+<td>Cinta a la altura del ombligo, relajado, al final de la
+exhalación.</td>
+</tr>
+<tr>
+<td>Fotos</td>
+<td>Cada 4 semanas</td>
+<td>Mismo lugar, misma luz, de frente y de perfil, cuerpo y cara.</td>
+</tr>
+<tr>
+<td>Sueño</td>
+<td>Cada noche</td>
+<td>Una marca en el papel de las 23:00: a qué hora apagaste la luz.</td>
+</tr>
+</tbody>
+</table>
+<p>La balanza va a bajar lento o nada si ganás músculo mientras perdés
+grasa. La cintura y las fotos son el dato real.</p>
+</section>
+</main>
+<script>
+  const links = [...document.querySelectorAll('nav a')];
+  const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => io.observe(s));
+</script>
+</body>
+</html>
