@@ -37,6 +37,7 @@ cat <<'HEAD'
   th, td { text-align: left; vertical-align: top; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); }
   th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
   td:first-child { white-space: nowrap; }
+  #gym td:nth-child(3) { white-space: nowrap; }
   strong { font-weight: 650; }
   code, pre { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.88rem; }
   pre { background: #f1efe9; padding: 0.9rem 1rem; border-radius: 6px; overflow-x: auto; }
